@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Escape Room</title>
+        <meta name="author" content="Corey Muscant"n/>
+        <meta name="description" content="HTML/CSS summative assignment">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style_main.css"> 
+        <style>
+
+            .container {
+                display: grid;
+                grid-template-areas:
+                'rules rules rules'
+                'image1 letters image2'
+                'footer footer footer';
+                padding: 10px;
+                grid-gap: 15px;
+
+            }
+
+            h1{
+                color:rgb(20, 240, 230);
+                font-size: 100px;
+                font-family: 'Orbitron', sans-serif;
+                letter-spacing: 6px;
+                grid-area: letters;
+            }
+
+            .photo1 {
+                width: 200px;
+                grid-area: image1;
+            }
+
+            .photo2 {
+                width: 200px;
+                grid-area: image2;
+                text-align: right;
+            }
+
+            .the_rules {
+                grid-area: rules;
+                color: coral; 
+                font-family: 'Orbitron', sans-serif;
+                font-size: 18px;
+
+            }
+            .the_footer {
+                grid-area: footer;
+                background-color: coral;
+                border-radius: 10px;
+                border-color: lightskyblue;
+                padding: 100px;
+                text-align: center;
+                font-family:'Orbitron', 'sans serif';
+                font-size: 35px;
+
+            }
+
+            a:link {
+                text-emphasis: none;
+            }
+            a { 
+                text-decoration: none;
+            }
+
+        </style>
+       
+    </head>
+    <body>
+    
+        <header>
+            <div id="navbar">
+                <nav>
+                   <a href="index.html">Home</a>
+                   <a href="answer.html">Answer</a>
+                   <a href="credits.html">Credits</a>
+                   <a class="t" href="index.html" ><b>Escape Room</b></a>
+               </nav>
+           </div>
+        </header>
+            <div class="container">                                                                                                                                                                                                                                      
+                <div class="the_rules">
+                    <h4>
+                        <center>The lights just turned on and you immediately find an old folder 
+                        with a piece of paper inside. The paper contains an ANAGRAM!
+                        Here are the letters:</center>
+                    </h4>
+                </div>
+    
+                <div class="photo1">
+                    <img id="folder" src="img/folder.jpeg" alt="this is a folder">
+                    
+                 </div>
+
+                 <div class="photo2">
+                    <img id="magnifying glass" src="img/magnifying glass.jpeg" alt="this is a magnifying glass">
+                </div>
+
+                <div class="the_letters">
+                    <h1><b>L H U M I E</b></h1>
+                </div>
+                <div class="the_footer">
+                    <h4><b><center>ONCE YOU SOLVE THIS, CLICK THE <a href="coolant_start.html">"NEXT PUZZLE"</a>BUTTON!</center></b></h4>
+
+                </div>
+            </div>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    </body>
+</html>

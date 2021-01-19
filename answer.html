@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>Escape Room</title>
+        <meta name="author" content="Jason">
+        <meta name="description" content="Code Show Case">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style_main.css">
+        <style>
+
+            @font-face {
+                font-family: 'TNG_Title';
+                src: url('font/TNG_Title.ttf'); 
+            }
+
+            html, body {
+                background-color: white;
+            }
+
+            img{
+                width: 260px;
+                height: 160px;
+            }
+
+            div.holder{
+                display: grid;
+                grid-template-columns:20% 20% 20% 20% 20% 20%;
+                grid-template-rows: 300px;
+                column-gap: 20px; 
+                
+                grid-template-areas: 
+                "first second third fourth fifth"
+            }
+
+            p{
+                font-family: 'TNG_Title';
+            }
+
+        
+            html, body {
+                margin: 0px;
+            }
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header> 
+            <div id="navbar">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="html.html">Answer</a>
+                    <a href="credits.html">Credits</a>
+                    <a class="t" href="index.html" ><b>Escape Room</b></a>
+                </nav>
+            </div>
+        </header>
+        <div class="holder">
+            <div calss="first">
+                 <p>Round one</p>
+                 <img src="img/answer.1.png" alt="Answer one">
+            </div>
+            <div calss="second">
+                <p>Round two</p>
+                <p>Choose right way becase I just put answer in the tittle of website.</p>
+            </div>
+            <div calss="third">
+                <p>Round three</p>
+                <p>Is the ractor temperature above 9387058 °C </p>
+                <p>Is the helium coolant ready </p>
+                <p>Are the manifolds open </p>
+                <p>Are there crew members present</p>
+            </div>
+            <div calss="fourth">
+                <p>Round four</p>
+                <img src="img/WechatIMG63.jpeg" alt="answer 2">
+            </div>
+            <div class="fifth">
+                <p>Round five</p>
+                <p>B > B > A > A</p>
+            </div>
+            </div>
+    </body>
+</html>

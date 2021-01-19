@@ -1,0 +1,337 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>Escape Room</title>
+        <meta name="author" content="Qasim">
+        <meta name="description" content="Flowchart puzzel">
+        <meta charset="UTF-8">      
+        <link rel="stylesheet" href="style_main.css">  
+        <style>
+
+
+
+            #display {
+                height: auto;
+                width: 70%;
+                margin-left: 10%;
+            }
+
+            hr {
+                margin-right: 27%;
+                margin-left:27%;
+                color: gray;
+                height: 1px;
+
+            }
+
+
+            h2 {
+                font-family: 'TNG_Title';
+            }
+    
+            p {
+                color: whitesmoke;
+                font-family: 'TNG_Title';
+                width: 200px;
+                text-align: center;
+                margin: auto;
+                border-style: solid;
+                border-radius: 10px;
+            }
+
+            img {
+                width: 70%;
+                height: 300px;
+                padding: 100px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                margin: auto;
+            }
+
+
+            #arrow_one {
+                grid-area: a1;
+            }
+
+            #arrow_two {
+                grid-area: a2;
+            }
+
+            #arrow_three {
+                grid-area: a3;
+            }
+
+            #arrow_four {
+                grid-area: a4;
+            }
+
+            #arrow_five {
+                grid-area: a5;
+            }
+
+            #arrow_six {
+                grid-area: a6;
+            }
+
+            select {
+                background-color: black;
+                color: white;
+                font-family: 'TNG_Title';
+                font-size: 15px;
+                width: auto;
+                border-color: coral;
+                border-style:inset;
+                border-radius: 25px;
+                border-width: 10px;
+                text-align: center;
+                margin: auto;
+            }
+
+            #First_one {
+                grid-area: F;
+                border-color: #9ea12e;
+                background-color: #9ea12e;
+            }
+
+            #Second_one {
+                grid-area: S1;
+                border-color:#a71313;
+                background-color:#a71313;
+            }
+
+            #Second_two {
+                grid-area: S2;
+                border-color: #2b53a7;
+                background-color: #2b53a7;
+            }
+
+            #Third_one {
+                grid-area: Th1;
+                border-color:#a71313;
+                background-color:#a71313;
+            }
+
+            #Third_two {
+                grid-area: Th2;
+                border-color: #9ea12e;
+                background-color: #9ea12e;
+            }
+
+            #Final_one {
+                grid-area: F1;
+                border-color: #2b53a7;
+                background-color: #2b53a7;
+            }
+
+            #Final_two {
+                grid-area: F2;
+                border-color: #9ea12e;
+                background-color: #9ea12e;
+            }
+
+            #container{
+                display: grid;
+                grid-template-areas: 
+                '. one .'
+                'a1 a1 a1'
+                'two two F'
+                'a2 a2 a2'
+                'S1 . S2'
+                'a3 a3 a3'
+                '. three .'
+                'a4 a4 a4'
+                'Th1 . Th2'
+                'a5 a5 a5'
+                '. four .'
+                'a6 a6 a6'
+                'F1 . F2';
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            #Chart_One {
+                background-color: rgb(87, 100, 100);
+                grid-area: one;
+            } 
+
+            #Chart_Two {
+                background-color: rgb(74, 88, 88);
+                grid-area: two;
+                margin-left: 10%;
+
+            } 
+            
+            #Chart_Three {
+                background-color: rgb(65, 80, 80);
+                grid-area: three;
+            } 
+            
+            #Chart_Four {
+                background-color: rgb(54, 66, 66);
+                grid-area: four;
+            } 
+
+            #check {
+                margin-left: 45%;
+                width: 10%;
+                font-size: 30px;
+            }
+
+            .play {
+                margin: auto;
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            #isDisabled {
+                grid-area: play;
+                cursor: not-allowed;
+                opacity: 0.5;
+                margin-left: 45%;
+            }
+            #isDisabled > a {
+                color: currentColor;
+                background-color: grey;
+                display: inline-block; 
+                pointer-events: none;
+                text-decoration: none;
+                width: 6%;
+                margin: auto;
+            }
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <div id="navbar">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="answer.html">Answer</a>
+                    <a href="credits.html">Credits</a>
+                    <a class="t" href="index.html" ><b>Escape Room</b></a>
+                </nav>
+            </div>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Fix the subroutine</h2>
+        <br>
+        <hr>
+        <br>
+
+        <div id="container">
+
+            <select id="Chart_One" name="Chart One">
+                <option value="2">Is the helium coolant ready</option>
+                <option value="4">Are there crew members present</option>
+                <option value="1">Is the ractor temperature above 9387058 °C</option>
+                <option value="3">Are the manifolds open</option>
+            </select>
+
+            <img src="img/Arrow/Arrow.png" id="arrow_one" alt="Flowchart arrow">
+
+            <p id="First_one">Turn off subroutine</p>
+
+            
+            <select id="Chart_Two" name="Chart Two">
+                <option value="2">Is the helium coolant ready</option>
+                <option value="4">Are there crew members present</option>
+                <option value="1">Is the ractor temperature above 9387058 °C</option>
+                <option value="3">Are the manifolds open</option>
+            </select>
+
+            <img src="img/Arrow/Arrow_2.png" id="arrow_two" alt="Flowchart arrow">
+
+            <p id="Second_one">Inject the helium coolant</p>
+            
+            <p id="Second_two">Open reactor vents</p>
+
+            <img src="img/Arrow/Arrow_3.png" id="arrow_three" alt="Flowchart arrow">
+
+
+            <select id="Chart_Three" name="Chart Three">
+                <option value="2">Is the helium coolant ready</option>
+                <option value="4">Are there crew members present</option>
+                <option value="1">Is the ractor temperature above 9387058 °C</option>
+                <option value="3">Are the manifolds open</option>
+            </select>
+
+            <img src="img/Arrow/Arrow.png" id="arrow_four" alt="Flowchart arrow">
+            
+            <p id="Third_one">Vent plasma</p>
+
+            <p id="Third_two">Inject the plasma with liquid nitrogen</p>
+
+            <img src="img/Arrow/Arrow_3.png" id="arrow_five" alt="Flowchart arrow">
+
+            <select id="Chart_Four" name="Chart Four">
+                <option value="2">Is the helium coolant ready</option>
+                <option value="4">Are there crew members present</option>
+                <option value="1">Is the ractor temperature above 9387058 °C</option>
+                <option value="3">Are the manifolds open</option>
+            </select>
+            
+            <img src="img/Arrow/Arrow.png" id="arrow_six" alt="Flowchart arrow">
+
+            <p id="Final_one">Flood the reactor with liquid nitrogen</p>
+
+            <p id="Final_two">Dump Core</p>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button class="play" id="check" onclick="main()">Check</button>
+        <br>
+        <br>
+        <img src="img/Display/Display_1.png" id="display" alt="Answer display">
+        <br>
+        <br>
+        <br>
+        <span id="isDisabled"><a href="powerroom.html" class="play" id='link'>Next</a></span>
+        <br>
+        <br>
+
+
+        <script>
+            let t;
+            let one;
+            let two;
+            let three;
+            let four;
+            function main(){
+                t = 1;
+                one = document.getElementById("Chart_One").selectedIndex;
+                two = document.getElementById("Chart_Two").selectedIndex;
+                three = document.getElementById("Chart_Three").selectedIndex;
+                four = document.getElementById("Chart_Four").selectedIndex;
+                if (document.getElementsByTagName("option")[one].value == "1"){
+                    t += 1;
+                }
+                if (document.getElementsByTagName("option")[two].value == "2"){
+                    t += 1;
+                }
+                if (document.getElementsByTagName("option")[three].value == "3"){
+                    t += 1;
+                }
+                if (document.getElementsByTagName("option")[four].value == "4"){
+                    t += 1;
+                }
+                document.getElementById("display").src = "img/Display/Display_" + t + ".png"
+                if (t == 5){
+                    document.getElementById("link").style.pointerEvents = "auto";
+                    document.getElementById("link").style.backgroundColor = " #F3993E";
+                    document.getElementById("link").style.borderColor = " #F3993E";
+                }
+            }
+        </script>
+
+        <script src="timer.js"></script>
+
+    </body>
+</html>

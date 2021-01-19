@@ -1,0 +1,180 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>Escape Room</title>
+        <meta name="author" content="Qasim">
+        <meta name="description" content="Asteriods puzzel">
+        <meta charset="UTF-8">      
+        <link rel="stylesheet" href="style_main.css">  
+        <style>
+            @media only screen and (max-width: 1000px) { 
+                body, html{
+                    background-color: red;
+                }
+                img {
+                    visibility: hidden;
+                }
+            }
+
+
+            @keyframes asteroid {
+                0%   {margin-left: 110%; box-shadow:0px 0px 11px 6px #747DE8; visibility: visible; transform: rotate(0deg);}
+                40% {box-shadow: 0px 0px 11px 6px #747DE8;}
+                75% {box-shadow: 0px 0px 11px 6px orange;}
+                100% {margin-left: -10%; box-shadow: 0px 0px 11px 6px red; transform: rotate(360deg);}
+            }
+
+            input {
+                color: white;
+                visibility: hidden;
+                margin: 30px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 11px 6px #747DE8;
+                animation-name: asteroid;
+                animation-duration: 20s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+                background-color: rgba(0, 0, 0, 0);
+                position: absolute;
+                padding: 0px;
+            }
+
+            span {
+                width: 100%;
+            }
+
+            .play {
+                margin-left: 45%;
+                font-size: 35px;
+                width: 10%;
+            }
+
+            .spin {
+                animation: spin 2s infinite linear;
+            }
+            #Warning {
+                width: 100%;
+                text-align: center;
+            }
+
+            html, body{
+                overflow: hidden;
+                height: 100%;
+            }
+
+            #isDisabled {
+                grid-area: play;
+                cursor: not-allowed;
+                opacity: 0.5;
+                margin-left: 45%;
+                z-index: 10;
+            }
+            #isDisabled > a {
+                color: currentColor;
+                background-color: grey;
+                display: inline-block; 
+                pointer-events: none;
+                text-decoration: none;
+                width: 6%;
+                margin: auto;
+            }
+
+            img {
+                position: absolute;
+                top: 65px;
+                height: 100%;
+                width: 40%;
+            }
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <div id="navbar">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="answer.html">Answer</a>
+                    <a href="credits.html">Credits</a>
+                    <a class="t" href="index.html" ><b>Escape Room</b></a>
+                </nav>
+            
+        </header>
+        <h1 id="Warning">Please make the screen bigger</h1> <!--Warning, displays when screen is too small-->
+        <br>
+        <img src="img/Atmosphere.png"> <!--Background-->
+        
+        <input type="image" id="1" onclick="remove(this.id)" src="img/Asteroid.png"> <!--All of the asteroids-->
+        <input type="image" id="2" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="3" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="4" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="5" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="6" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="7" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="8" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="9" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="10" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="11" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="12" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="13" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="14" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="15" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="14" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="15" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="16" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="17" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="18" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="19" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="20" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="21" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="22" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="23" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="24" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="25" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="26" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="27" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="28" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="29" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="30" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="31" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="32" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="33" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="34" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="35" onclick="remove(this.id)" src="img/Asteroid.png"> 
+        <input type="image" id="36" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="37" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="38" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="39" onclick="remove(this.id)" src="img/Asteroid.png">
+        <input type="image" id="40" onclick="remove(this.id)" src="img/Asteroid.png">
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <!--space for asteroids-->
+
+        <span id="isDisabled"><a href="hallway.html" class="play" id='link'>Next</a></span>
+        <script type="text/javascript">
+        let id
+        window.onload = ready()
+        function remove(clicked_id){
+            id = document.getElementById(clicked_id);
+            id.remove();
+            if (document.getElementsByTagName("input").length == 0) {
+                document.getElementById("link").style.pointerEvents = "auto";
+                document.getElementById("link").style.backgroundColor = "#F3993E";
+                document.getElementById("link").style.borderColor = "#F3993E";
+            }
+        }
+        function ready(){
+            let list = document.getElementsByTagName("input");
+            for (i = 0; i < list.length; i++) {
+                list[i].style.animationDelay = (Math.random() * 21)+"s";
+                list[i].style.top = (Math.random() * 401 + 100)+"px";
+                list[i].style.rotate = Math.floor(Math.random() * 361)+"deg";
+            }
+
+        }
+        </script>
+
+        <script src="timer.js"></script>
+    </body>
+</html>

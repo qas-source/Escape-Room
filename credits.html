@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>Escape Room</title>
+        <meta name="author" content="Qasim">
+        <meta name="description" content="Credits">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style_main.css">
+        <style>
+
+            body, html { 
+                background-color: whitesmoke;
+            }
+
+            img {
+                height: 40%;
+                margin-left: 15%;
+            }
+
+            #isDisabled {
+                grid-area: play;
+                cursor: not-allowed;
+                opacity: 0.5;
+                margin-left: 45%;
+            }
+            #isDisabled > a {
+                color: currentColor;
+                background-color: grey;
+                display: inline-block; 
+                pointer-events: none;
+                text-decoration: none;
+                width: 10%;
+                margin: auto;
+                background-color: #F3993E;
+                border-color: #F3993E;
+                font-size: 40px;
+                text-align: center;
+            }
+
+            h1 {
+                font-family: TNG_Title;
+                margin-left: 10%;
+            }
+
+            p {
+                font-family: TNG_Title;
+                margin-left: 10%;
+                width: 60%;
+            }
+
+            .content {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                grid-template-areas: 
+                'Q C J';
+            }
+
+            #Qasim {
+                grid-area: Q;
+                height: 1000px;
+            }
+
+            #Corey {
+                grid-area: C;
+                height: 1000px;
+            }
+
+            #Jason {
+                grid-area: J;
+                height: 700px;
+            }
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <div id="navbar">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="answer.html">Answer</a>
+                    <a href="credits.html">Credits</a>
+                    <a class="t" href="index.html" ><b>Escape Room</b></a>
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <div id="Qasim">
+                <h1>Qasim:</h1>
+                <p>Hello there, I hope you enjoyed this adventure, my puzzels, the wire and flowchart ones, were inspired by Star Trek and their techno bable, while the puzzel conspets were inspired by video games I have played throughout my life and the sample escape presented at the begining of the unit, the extent of this is that I used both the font and color palette for it. I hope you enjoyed this and here are the rest of the people who made this wonderful game for you.</p>
+                <img src="img/Qasim.jpg" alt="Photo of Qasim">
+            </div>
+
+            <div id="Corey">
+                <h1>Corey:</h1>
+                <p>Hello fallen players. I see you have made it to the end. The end of the digital Escape Room. The main two puzzles that were mine included of a tricky anagram and some challenging trivia. For the anagram I was inspired from the digital escape room at the start of the year. Sterotypical puzzles always were something that caught my eye. I hope it wasn't too challenging. For the, it should have been very straight forward... if you listened in Mr, Drenth's class. One thing i wanted to point out is that the answers for the questions didn't have the " &lt; &gt;" for good reason. If I tried to implement them into the answers, it would mess up the code as the computer would believe that I was trying to actually code something. Other than that, I hoped you enjoyed my puzzles and this Escape Room as a whole!</p>
+                <img src="img/Corey.png" alt="Photo of Corey">
+            </div>
+
+            <div id="Jason">
+                <h1>Jason:</h1>
+                <p>Hello there, I hope you enjoyed this adventure, my puzzels, the wire and flowchart ones, were inspired by Star Trek, the extent of this is that I used both the font and color palette for it. I hope you enjoyed this and here are the rest of the people who made this wonderful game for you.</p>
+                <img src="img/Jason.png" alt="Photo of Jason">
+            </div>
+        </div>
+        
+
+        <span id="isDisabled"><a href="" class="play">Survey</a></span>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>

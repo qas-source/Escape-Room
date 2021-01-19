@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	
+<head>
+<meta charset="UTF-8">
+<title>Choose "right" way go to the powerroom</title>
+    <style>
+		/*Set background*/
+		body{
+			background-image: url("img/2048x1536_sci-fi-corridor-tunnel-spaceship-station-glow.jpg"); 
+			background-size: 100%
+		}
+		/*Set three chooses*/
+		#rightway{
+			position: absolute; 
+			width: 150px; 
+			height: 100%; 
+			float: right; 
+			top: 200px; 
+			right: 0px;
+		}
+
+		#streetway{
+			position: absolute; 
+			width: 500px; 
+			height: 100%; 
+			left: 30%; 
+			top: 200px
+		}
+
+		#leftway{
+			position: absolute;
+			width: 150px; 
+			height: 100%; 
+			float: left; 
+			top: 200px;  
+			left: 0px;
+		}
+
+
+		#navbar {
+			overflow: hidden;
+			background-color: #333;
+			margin: 0px;
+		}
+
+
+		#navbar a {
+			border-style: solid;
+			border-bottom: transparent;
+			border-top: transparent;
+			border-width: 1px;
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px;
+			text-decoration: none;
+			background-color:  #333;
+			padding: 24px;
+			font-family: 'TNG_Title';
+		}
+
+		#navbar .t {
+			float: right;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px;
+			text-decoration: none;
+			background-color:  #333;
+			font-family: 'TNG_Title';
+			font-size: 2em;
+			padding-top: 14px;
+			border: transparent;
+		}
+
+		html, body {
+			margin: 0px;
+		}
+
+		@font-face {
+			font-family: 'TNG_Title';
+			src: url('font/TNG_Title.ttf'); 
+		}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<div id="navbar">
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="answer.html">Answer</a>
+				<a href="credits.html">Credits</a>
+				<a class="t" href="index.html" ><b>Escape Room</b></a>
+			</nav>
+		</div>
+	</header>
+    <!--Set boxes-->
+	<a id="leftway" href="wrongway.html"></a>
+	<a id="streetway" href="wrongway.html"></a>
+	<a id="rightway" href="anagram.html"></a>
+</body>
+</html>

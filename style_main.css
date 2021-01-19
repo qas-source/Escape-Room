@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'TNG_Title';
+    src: url('font/TNG_Title.ttf'); 
+}
+
+html, body {
+    margin: 0px;
+    background-color: black;
+    width: 100%;
+}
+
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+    margin: 0px;
+}
+
+
+#navbar a {
+    border-style: solid;
+    border-bottom: transparent;
+    border-top: transparent;
+    border-width: 1px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    background-color:  #333;
+    padding: 24px;
+    font-family: 'TNG_Title';
+}
+
+#navbar .t {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    background-color:  #333;
+    font-family: 'TNG_Title';
+    font-size: 2em;
+    padding-top: 14px;
+    border: transparent;
+}
+
+
+
+
+
+.play { 
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    font-size: 5em;
+    font-family: 'TNG_Title';
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 60px;
+    border-color: #F3993E;
+    background-color: #F3993E;
+}
+
+h2 {
+    color: azure;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}

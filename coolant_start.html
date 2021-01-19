@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>Escape Room</title>
+        <meta name="author" content="Qasim">
+        <meta name="description" content="Flowchart puzzel">
+        <meta charset="UTF-8">      
+        <link rel="stylesheet" href="style_main.css">  
+        <style>
+
+            h4 {
+                color: white;
+                font-family: 'TNG_Title';
+                width: 100%;
+                text-align: center;
+                font-size: 10px;
+            }
+
+
+            p {
+                color: whitesmoke;
+                width: 100%;
+                text-align: center;
+                margin: 0%;
+
+            }
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            span:not(.effect) {
+                display: inline-block;
+                background-color: rgb(65, 65, 65);
+                color: white;
+                font-family: 'TNG_Title';
+                font-size: 15px;
+                width: 50%;
+                border-color: coral;
+                border-style:inset;
+                border-radius: 25px;
+                border-width: 10px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+
+            .effect {
+                display: inline-block;
+                color: white;
+                font-family: 'TNG_Title';
+                font-size: 15px;
+                width: 50%;
+                border-style: solid;
+                border-radius: 10px;
+
+            }
+            #container {
+                display: grid;
+                grid-template-areas: 
+                'one two'
+                'three four';
+                grid-template-columns: 50% 50%;
+            }
+
+            #one {
+                grid-area: one;
+            }
+
+            #two {
+                grid-area: two;
+            }
+
+            #three {
+                grid-area: three;
+            }
+
+            #four {
+                grid-area: four;
+            }
+
+            .play {
+                display: block;
+                font-size: 25px;
+                padding: 7px;
+                margin: auto; 
+                width: 100px;   
+            }
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <div id="navbar">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="answer.html">Answer</a>
+                    <a href="credits.html">Credits</a>
+                    <a class="t" href="index.html" ><b>Escape Room</b></a>
+                </nav>
+            </div>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>The coolant subroutine has been lost, you still remember the workflow it was based on. You need to reconstruct the subroutine before you can enter the reactor room.</h2>
+        <h4><u>*take note of these since you can not return</u>></h4>
+
+        <div id='container'>
+            <div id="one">
+            <p><br><br><span>Is the helium coolant ready</span></p>
+            <img src="img/Arrow/Arrow_Pre.png" alt="arrow down">
+            <p><span class="effect" style="border-color:#a71313; background-color:#a71313;">Inject the helium coolant</span></p>
+            </div>
+
+            <div id="two">
+            <p><br><br><span>Are there crew members present</span></p>
+            <img src="img/Arrow/Arrow_Pre.png" alt="arrow down">
+            <p><span class="effect" style="border-color: #2b53a7; background-color: #2b53a7;">Open reactor vents</span></p>
+            </div>
+
+            <div id="three">
+            <p><br><br><span>Is the ractor temperature above 9387058 °C</span></p>
+            <img src="img/Arrow/Arrow_Pre.png" alt="arrow down">
+            <p><span class="effect" style="border-color: #9ea12e; background-color: #9ea12e;">Turn off subroutine</span></p>
+            </div>
+
+            <div id="four">
+            <p><br><br><span>Are the manifolds open</span></p>
+            <img src="img/Arrow/Arrow_Pre.png" alt="arrow down">
+            <p><span class="effect" style="border-color:#a71313; background-color:#a71313;">Vent plasma</span></p>
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        
+        <a href="coolant.html" class="play">Next</a>
+
+        <script src="timer.js"></script>
+    </body>
+</html>

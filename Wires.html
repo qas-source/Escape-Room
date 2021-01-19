@@ -1,0 +1,260 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>Escape Room</title>
+        <meta name="author" content="Qasim">
+        <meta name="description" content="Wire puzzel">
+        <meta charset="UTF-8">      
+        <link rel="stylesheet" href="style_main.css">  
+        <style>
+
+            html, body{overflow:hidden;}
+
+            p {
+                color: white;
+            }
+
+            #Display {
+                font-family: 'TNG_Title';
+                color: red;
+                border-style: groove;
+                border-color: grey;
+                padding: 20px;
+                width: 270px;
+                background-color: rgb(54, 54, 54);
+            }
+
+
+            html, body {
+                background-color: #08141e;
+            }
+
+
+            #Wires_Grid {
+                display: grid;
+                grid-template-areas:  
+                'S w1 w2 w3 .'
+                '. w4 w5 w6 play'
+                '. w7 w8 w9 E';
+                margin: auto;
+                width: 1200px;
+                height: 70px;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                margin-bottom: 60%;
+            }
+
+            img {
+                height: 250px;
+                width: 250px;
+                padding: 0px;
+                margin: -2px;
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+
+            button {
+                background: transparent;
+                border: none !important;
+                font-size:0;
+            }
+
+            #Start {
+                grid-area: S;
+            }
+
+            #grid_1 {
+                grid-area: w1;
+            }
+
+            #grid_2 {
+                grid-area: w2;
+            }
+
+            #grid_3 {
+                grid-area: w3;
+            }
+
+            #grid_4 {
+                grid-area: w4;
+            }
+
+            #grid_5 {
+                grid-area: w5;
+            }
+
+            #grid_6 {
+                grid-area: w6;
+            }
+
+            #grid_7 {
+                grid-area: w7;
+            }
+
+            #grid_8 {
+                grid-area: w8;
+            }
+
+            #grid_9 {
+                grid-area: w9;
+            }
+
+            #End_con {
+                grid-area: E;
+            }
+
+
+            h2 {
+                color: azure;
+                text-align: center;
+                width: 50%;
+                margin: auto;
+            }
+
+            .centered {
+                position: absolute;
+                top: 14%;
+                left: 30%;
+            }
+
+            .container {
+                position: relative;
+                text-align: center;
+                color: #e6e21b;
+                font-family: 'TNG_Title';
+                font-size: 1.2em;
+            }
+
+            .play {
+                font-size: 3em;
+                height: 20%;
+                margin-top: 30%;
+                width: 50%;
+                margin: auto;
+                background-color:rgba(105, 105, 105, 0.521);
+                border-color: rgba(105, 105, 105, 0.521);
+            }
+
+            #isDisabled {
+                grid-area: play;
+                cursor: not-allowed;
+                opacity: 0.5;
+                margin-top: 30%;
+                margin-left: 5%;
+            }
+            #isDisabled > a {
+                color: currentColor;
+                display: inline-block; 
+                pointer-events: none;
+                text-decoration: none;
+            }
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <div id="navbar">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="answer.html">Answer</a>
+                    <a href="credits.html">Credits</a>
+                    <a class="t" href="index.html" ><b>Escape Room</b></a>
+                </nav>
+            </div>
+        </header>
+        <br>
+        <br>
+        <h2 id="Display">
+            Circut Board Is <u>Broken</u>
+        </h2>
+        <br>
+        <br>
+        <br>
+        <div id="Wires_Grid"> 
+            <div class="container">
+                <img id="Start" src="img/Wires/Wire_Tip_0.png" alt="Wire Start">
+                <div class="centered"><p>Door Input</p></div>
+            </div>
+            <button id="grid_1"   onclick="line('wire_1',0)"><img id="wire_1" src="img/Wires/Wire_0.png" alt="Wire 0"></button>
+            <button id="grid_2"   onclick="line('wire_2',1)"><img id="wire_2" src="img/Wires/Wire_1.png" alt="Wire 1"></button>
+            <button id="grid_3" onclick="corner('wire_3',2)"><img id="wire_3" src="img/Wires/Wire_2.png" alt="Wire 2"></button>
+            <button id="grid_4" onclick="corner('wire_4',9)"><img id="wire_4" src="img/Wires/Wire_3.png" alt="Wire 3"></button>
+            <button id="grid_5" onclick="corner('wire_5',3)"><img id="wire_5" src="img/Wires/Wire_4.png" alt="Wire 4"></button>
+            <button id="grid_6" onclick="corner('wire_6',4)"><img id="wire_6" src="img/Wires/Wire_5.png" alt="Wire 5"></button>
+            <button id="grid_7"   onclick="line('wire_7',9)"><img id="wire_7" src="img/Wires/Wire_0.png" alt="Wire 0"></button>
+            <button id="grid_8" onclick="corner('wire_8',5)"><img id="wire_8" src="img/Wires/Wire_2.png" alt="Wire 2"></button>
+            <button id="grid_9"   onclick="line('wire_9',6)"><img id="wire_9" src="img/Wires/Wire_1.png" alt="Wire 1"></button>
+            <div class="container" id="End_con">
+                <img id="End" src="img/Wires/Wire_Tip_1.png" alt="Wire End">
+                <div class="centered"><p>Door Locks</p></div>
+            </div>
+            <span id="isDisabled"><a href="asteriods_start.html" class="play" id='link'>Next</a></span>
+        </div>
+        <script>
+            let answer = [0, 1, 1, 0, 1, 3, 1]; //This is the the position of the images in order from start to end
+            let input = [0, 0, 0, 0, 0, 0, 0]; //User imput
+            let play = true; //Is the game active
+            function corner(id, input_num) { //change image for corner pieces
+                if (play == true){
+                    if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_2.png'){
+                        document.getElementById(id).src = "img/Wires/Wire_3.png";
+                    } 
+                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_3.png') {
+                        document.getElementById(id).src = "img/Wires/Wire_4.png";
+                    }
+                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_4.png') {
+                        document.getElementById(id).src = "img/Wires/Wire_5.png";
+                    }
+                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_5.png') {
+                        document.getElementById(id).src = "img/Wires/Wire_2.png";
+                    }
+                    if (input_num != 9){
+                        input[input_num] = (input[input_num] + 1) % 4;
+                    }
+                    if (JSON.stringify(input)==JSON.stringify(answer)){
+                        Win()
+                    }
+                }
+            }
+            function line(id, input_num) { // Change image for line pieces
+                if (play == true){
+                    if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_0.png'){
+                        document.getElementById(id).src = "img/Wires/Wire_1.png";
+                    } 
+                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_1.png') {
+                        document.getElementById(id).src = "img/Wires/Wire_0.png";
+                    }
+                    if (input_num != 9){
+                        input[input_num] = (input[input_num] + 1) % 2;
+                    }
+                    if (JSON.stringify(input)==JSON.stringify(answer)){
+                        Win()
+                    }
+                }
+            }
+
+
+
+            function Win(){ //Win function
+                document.getElementById("Display").innerHTML = "Circut Board Is Fixed";
+                document.getElementById("Display").style.color = "green"; 
+                play = false;
+                document.getElementById("End").src = "img/Wires/Wire_Tip_2.png";
+                document.getElementById("isDisabled").style.cursor = "pointer";
+                document.getElementById("link").style.pointerEvents = "auto";
+                document.getElementById("link").style.backgroundColor = "#c1c730";
+                document.getElementById("link").style.borderColor = "#c1c730";
+            }
+
+
+            
+            
+        </script>
+
+        <script src="timer.js"></script>
+    </body>
+</html>
