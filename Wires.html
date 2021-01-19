@@ -200,17 +200,17 @@
             let play = true; //Is the game active
             function corner(id, input_num) { //change image for corner pieces
                 if (play == true){
-                    if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_2.png'){
-                        document.getElementById(id).src = "img/Wires/Wire_3.png";
+                    if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'wire_2.png'){
+                        document.getElementById(id).src = "img/Wires/wire_3.png";
                     } 
-                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_3.png') {
-                        document.getElementById(id).src = "img/Wires/Wire_4.png";
+                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'wire_3.png') {
+                        document.getElementById(id).src = "img/Wires/wire_4.png";
                     }
-                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_4.png') {
-                        document.getElementById(id).src = "img/Wires/Wire_5.png";
+                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'wire_4.png') {
+                        document.getElementById(id).src = "img/Wires/wire_5.png";
                     }
-                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_5.png') {
-                        document.getElementById(id).src = "img/Wires/Wire_2.png";
+                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'wire_5.png') {
+                        document.getElementById(id).src = "img/Wires/wire_2.png";
                     }
                     if (input_num != 9){
                         input[input_num] = (input[input_num] + 1) % 4;
@@ -222,11 +222,11 @@
             }
             function line(id, input_num) { // Change image for line pieces
                 if (play == true){
-                    if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_0.png'){
-                        document.getElementById(id).src = "img/Wires/Wire_1.png";
+                    if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'wire_0.png'){
+                        document.getElementById(id).src = "img/Wires/wire_1.png";
                     } 
-                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'Wire_1.png') {
-                        document.getElementById(id).src = "img/Wires/Wire_0.png";
+                    else if (document.getElementById(id).src.replace(/^.*[\\\/]/, '') == 'wire_1.png') {
+                        document.getElementById(id).src = "img/Wires/wire_0.png";
                     }
                     if (input_num != 9){
                         input[input_num] = (input[input_num] + 1) % 2;
