@@ -149,29 +149,27 @@
         <input type="image" id="39" onclick="remove(this.id)" src="img/Asteroid.png">
         <input type="image" id="40" onclick="remove(this.id)" src="img/Asteroid.png">
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <!--space for asteroids-->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <!--space for asteroids/ split up for ease of viewing-->
 
         <span id="isDisabled"><a href="hallway.html" class="play" id='link'>Next</a></span>
         <script type="text/javascript">
-        let id
-        window.onload = ready()
+
+        window.onload = ready();
         function remove(clicked_id){
-            id = document.getElementById(clicked_id);
-            id.remove();
-            if (document.getElementsByTagName("input").length == 0) {
-                document.getElementById("link").style.pointerEvents = "auto";
-                document.getElementById("link").style.backgroundColor = "#F3993E";
+            document.getElementById(clicked_id).remove(); // Delete asteroid
+            if (document.getElementsByTagName("input").length == 0) { //Check if you have won / there are no asteroids left
+                document.getElementById("link").style.pointerEvents = "auto"; // Make link pressable
+                document.getElementById("link").style.backgroundColor = "#F3993E"; // Change style
                 document.getElementById("link").style.borderColor = "#F3993E";
             }
         }
-        function ready(){
-            let list = document.getElementsByTagName("input");
-            for (i = 0; i < list.length; i++) {
-                list[i].style.animationDelay = (Math.random() * 21)+"s";
-                list[i].style.top = (Math.random() * 401 + 100)+"px";
-                list[i].style.rotate = Math.floor(Math.random() * 361)+"deg";
-            }
-
+        function ready(){ // Run at start / Setup
+            let asteroids = document.getElementsByTagName("input"); // All the asteroids
+            for (i = 0; i < asteroids.length; i++) {
+                asteroids[i].style.animationDelay = (Math.random() * 21)+"s"; // Set their delay to start, makes them spread out on the x axis
+                asteroids[i].style.top = (Math.random() * 401 + 100)+"px"; // Spreads them out on the y axis
+                asteroids[i].style.rotate = Math.floor(Math.random() * 361)+"deg"; // Random Rotation
+            } 
         }
         </script>
 

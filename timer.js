@@ -1,4 +1,6 @@
-let timer = window.setInterval(myTimer, 1000);
+// This script is by Qasim
+
+let timer = window.setInterval(myTimer, 1000); 
 
 sessionStorage.time
 function myTimer() {

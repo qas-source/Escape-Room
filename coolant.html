@@ -293,24 +293,24 @@
         <br>
         <br>
         <br>
-        <span id="isDisabled"><a href="powerroom.html" class="play" id='link'>Next</a></span>
+        <span id="isDisabled"><a href="shuttle_start.html" class="play" id='link'>Next</a></span>
         <br>
         <br>
 
 
         <script>
-            let t;
-            let one;
+            let t; // Total count of how many are correct
+            let one; // The ids for the different options
             let two;
             let three;
             let four;
-            function main(){
+            function main(){  // Called when 
                 t = 1;
-                one = document.getElementById("Chart_One").selectedIndex;
+                one = document.getElementById("Chart_One").selectedIndex; //sets the index of each option tag
                 two = document.getElementById("Chart_Two").selectedIndex;
                 three = document.getElementById("Chart_Three").selectedIndex;
                 four = document.getElementById("Chart_Four").selectedIndex;
-                if (document.getElementsByTagName("option")[one].value == "1"){
+                if (document.getElementsByTagName("option")[one].value == "1"){ // Compares the value of the option versus their correct value
                     t += 1;
                 }
                 if (document.getElementsByTagName("option")[two].value == "2"){
@@ -322,11 +322,11 @@
                 if (document.getElementsByTagName("option")[four].value == "4"){
                     t += 1;
                 }
-                document.getElementById("display").src = "img/Display/Display_" + t + ".png"
-                if (t == 5){
-                    document.getElementById("link").style.pointerEvents = "auto";
-                    document.getElementById("link").style.backgroundColor = " #F3993E";
-                    document.getElementById("link").style.borderColor = " #F3993E";
+                document.getElementById("display").src = "img/Display/Display_" + t + ".png" // Sets the output image to display the amount of correct answers
+                if (t == 5){ // Checks if player has won
+                    document.getElementById("link").style.pointerEvents = "auto"; // Allows The link to be used
+                    document.getElementById("link").style.backgroundColor = "#F3993E"; // Changes to style of the button to show that it is active
+                    document.getElementById("link").style.borderColor = "#F3993E";
                 }
             }
         </script>
