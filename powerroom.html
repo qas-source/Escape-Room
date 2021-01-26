@@ -24,7 +24,7 @@
 	}
 	
 	/*Make buttons have color*/
-	button.one{background-color: green;}
+	button#one{background-color: green;}
 	button#two{background-color: hotpink;}
 	button#three{background-color: khaki;}
 	button#four{background-color: lightcoral;}
@@ -93,6 +93,36 @@
 		margin: 0px;
 	}
 
+	div#one{
+		position: absolute;
+		left: 15%;
+		top: 31%;
+	}
+
+	div#two{
+		position: absolute;
+		left: 20%;
+		top: 31%;
+	}
+
+    div#three{
+		position: absolute;
+		left: 25.5%;
+		top: 31%;
+	}
+
+	div#four{
+		position: absolute;
+		left: 31%;
+		top: 31%;
+	}
+
+	div#five{
+		position: absolute;
+		left: 21%;
+		top: 37%;
+	}
+
 </style>
 </head>
 
@@ -110,28 +140,29 @@
 	</header>
 
 	<!--Button, button and buttons-->
-	<div>
-	    <a href="error.html"><button type="button" style="margin-left: 93px; margin-top: 190px" class="one"></button></a>
+	<div id="one">
+	    <a href="error.html"><button type="button" id="one"></button></a>
 		<a href="error.html"><button type="button" id="two"></button></a>
 		<a href="error.html"><button type="button" id="three"></button></a>
 	</div>
 		
-	<div>
-	    <a href="error.html"><button type="button" style="margin-left: 93px" id="four"></button></a>
+	<div id="two">
+	    <a href="error.html"><button type="button" id="four"></button></a>
 		<a href="error.html"><button type="button" id="five"></button></a>
 		<a href="error.html"><button type="button" id="six"></button></a>
 	</div>
-	<div>
-	    <a href="error.html"><button type="button" style="margin-left: 165px; margin-top:40px" id="seven"></button></a>
+	<div id="three">
+	    <a href="error.html"><button type="button" id="seven"></button></a>
 		<a href="error.html"><button type="button" id="eight"></button></a>
-		<a href="powerhasbeenfix.html"><button type="button" id="nine"></button></a>
+		<a href="password.html"><button type="button" id="nine"></button></a>
 	</div>
-	<div>
-	    <a href="error.html"><button type="button" style="margin-left: 165px" id="ten"></button></a>
+	<div id="four">
+	    <a href="error.html"><button type="button" id="ten"></button></a>
 		<a href="error.html"><button type="button" id="eleven"></button></a>
 		<a href="error.html"><button type="button" id="tweleve"></button></a>
 	</div>
-	    <a href="error.html"><button type="button" style="margin-left: 250px" id="thirteen"></button></a>
+	<div id="five">
+	    <a href="error.html"><button type="button" id="thirteen"></button></a>
 		<a href="error.html"><button type="button" id="fourteen"></button></a>
 		<a href="error.html"><button type="button" id="fifteen"></button></a>
 		<a href="error.html"><button type="button" id="sixteen"></button></a>
@@ -139,8 +170,9 @@
 		<a href="error.html"><button type="button" id="eighteen"></button></a>
 		<a href="error.html"><button type="button" id="nineteen"></button></a>
 		<a href="error.html"><button type="button" id="twenty"></button></a>
-        <!--Clue-->
-	    <a id="password" href="powerroompassword.html"></a>
-	
+        
+	</div>
+	<!--Clue-->
+	<a id="password" href="powerroompassword.html"></a>
 </body>
 </html>
