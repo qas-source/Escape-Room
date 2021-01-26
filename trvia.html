@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style_main.css">
         <style>
 
-            .container {
+            .container { /* this container is for the grid of the page */
                 display: grid;
                 grid-template-areas: 
                 'upper'
@@ -23,19 +23,19 @@
             }
 
             .top {
-                grid-area: upper;
+                grid-area: upper; /* top part of page */
                 background-color:darksalmon;
                 color: black;
     
 
             }
             .bottom {
-                grid-area: lower;
+                grid-area: lower; /* lower part of page */
                 background-color:cornflowerblue;
                 color: black;
             }
             h1 {
-                font-family: 'Orbitron','sans serif';
+                font-family: 'Orbitron','sans serif'; /* orbitron is the best font */
                 color: rgb(207, 82, 166);
                 font-size: 65px;
             }
@@ -46,7 +46,7 @@
 
             }
             #play {
-                text-align: center;
+                text-align: center; /* button stylized (changed from before) */
                 font-family: 'Orbitron','sans serif';
                 font-size: 90px;
                 border-radius: 100px;
@@ -60,7 +60,7 @@
 
     <body>
         <header>
-            <div id="navbar">
+            <div id="navbar"> <!--this navbar is a constant throughout the escape room-->
                 <nav>
                    <a href="index.html">Home</a>
                    <a href="answer.html">Answer</a>
@@ -72,16 +72,16 @@
 
         <div class="container">
             <div class="top">
-                <h2><center>This final puzzle will be a test. A test to determine how knowledgable you are in HTML and CSS
+                <h2><center>This final puzzle will be a test. A test to determine how knowledgable you are in HTML and CSS <!--Reference to the very nice lessons-->
                     Were you actually listening to Mr. Drenth's lessons? Did you use W3Schools? How much have you learned?
                 </center></h2>
             </div>
             <div class="bottom">
-                <h2><center>Click the "play" button to proceed to the testing area.</center></h2>
+                <h2><center>Click the "play" button to proceed to the testing area.</center></h2> <!--Instructions for puzzle-->
                 <br>
                 <br>
                 <br>
-                <a href="triviaquestions.html"><input type="button" id="play" value="play"></a>
+                <a href="triviaquestions.html"><input type="button" id="play" value="play"></a> <!--button that brings you to trivia question page-->
             </div>
         </div>
 

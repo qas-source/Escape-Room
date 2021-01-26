@@ -2,12 +2,13 @@
 <html lang="en">
     <head>
         <title>Escape Room</title>
-        <meta name="author" content="Corey Muscant"n/>
+        <meta name="author" content="Corey Muscant"/>
         <meta name="description" content="HTML/CSS summative assignment">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style_main.css"> 
+        <script src="timer.js"></script>
         <style>
-            body {
+            body { /* constant css, red theme as it is an incorrect page...*/
                 background-color:rgb(235, 149, 134);
                 margin: auto;
                 gap:inherit;
@@ -39,7 +40,7 @@
     </head>
     <body>
         <header>
-            <div id="navbar">
+            <div id="navbar"> <!---constant navbar-->
                 <nav>
                    <a href="index.html">Home</a>
                    <a href="answer.html">Answer</a>
@@ -49,18 +50,18 @@
            </div>
         </header>
         <h1><b>THAT IS INCORRECT!</b></h1>
-        <p  id="output">
+        <p  id="output"> <!---place holder for the score if you don't answer all trivia questions right-->
             <i>Place Holder</i>
         </p>
         <br>
         <br>
         <br>
         <br>
-        <h2><b>Click <a href="triviaquestions.html">HERE</a> to return to the trivia page! </b></h2>
+        <h2><b>Click <a href="triviaquestions.html">HERE</a> to return to the trivia page! </b></h2> <!---link back to trivia page so player can try again-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
         <script>
-            document.getElementById("output").innerHTML = "You got " + Number(sessionStorage.counter) + " out of 4";
+            document.getElementById("output").innerHTML = "You got " + Number(sessionStorage.counter) + " out of 4"; //this statement addresses the final score after answering the trivia
         </script>
     </body>
 

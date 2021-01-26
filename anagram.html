@@ -2,13 +2,15 @@
 <html lang="en">
     <head>
         <title>Escape Room</title>
-        <meta name="author" content="Corey Muscant"n/>
+        <meta name="author" content="Corey Muscant"/>
         <meta name="description" content="HTML/CSS summative assignment">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style_main.css"> 
         <script src="anagram.js"></script>
+        <script src="timer.js"></script>
+       
         <style>
-            .container {
+            .container { /* grid template area*/
                 display: grid;
                 grid-template-areas:
                 'rules rules rules'
@@ -20,7 +22,7 @@
             }
 
             h1{
-                color:rgb(20, 240, 230);
+                color:rgb(20, 240, 230); /* constant theme of ORBITRON*/
                 font-size: 100px;
                 font-family: 'Orbitron', sans-serif;
                 letter-spacing: 6px;
@@ -56,7 +58,7 @@
                 font-size: 35px;
 
             }
-            #NEXT {
+            #NEXT { /* next button; only appears after player enters correct answer to anagram*/
                 visibility: hidden;
                 background-color: mediumaquamarine;
                 border-radius: 75px;
@@ -65,7 +67,7 @@
                 font-family:'Orbitron', sans-serif;
                 
             }
-            #password {
+            #password { /* text box to enter password*/
                 background-color: mediumaquamarine;
                 border-radius: 75px;
                 padding: 10px;
@@ -74,7 +76,7 @@
                 font-family:'Orbitron', sans-serif;
 
             }
-            #submit {
+            #submit { /*button to be pressed when player wants to guess the answer*/
                 background-color: yellow;
                 border-radius: 30px;
                 padding: 15px;
@@ -90,7 +92,7 @@
     <body>
     
         <header>
-            <div id="navbar">
+            <div id="navbar"> <!---constant navbar-->
                 <nav>
                    <a href="index.html">Home</a>
                    <a href="answer.html">Answer</a>
@@ -104,7 +106,7 @@
                     <h4>
                         <center>The lights just turned on and you immediately find an old folder 
                         with a piece of paper inside. The paper contains an ANAGRAM!
-                        Here are the letters:</center>
+                        Here are the letters:</center> <!--background story for the puzzle-->
                     </h4>
                 </div>
     
@@ -116,13 +118,13 @@
                     <img id="magnifying glass" src="img/magnifying glass.jpeg" alt="this is a magnifying glass">
                 </div>
 
-                <div class="the_letters">
+                <div class="the_letters"> <!--letters for the anagram-->
                     <center><h1><b><span>L</span><span>H</span><span>I</span><span>E</span><span>M</span><span>U</span></b></h1></center>
                     <center><input type="text" id="password"></center>
                     <center><input type="button" id="submit" value="submit" onclick="check()"></center>
                     
                 </div>
-                <div class="the_footer">
+                <div class="the_footer"> <!--button linked with function that only appears if anagram is answered correctly-->
                     <a href="coolant.html"><input type="button" id="NEXT" value="NEXT" onclick="NEXT()"></a>
                 </div>
             <div>

@@ -2,13 +2,14 @@
 <hmtl lang="en">
     <head>
         <title>Escape Room</title>
-        <meta name="author" content="Corey Muscant"n/>
+        <meta name="author" content="Corey Muscant"/>
         <meta name="description" content="HTML/CSS summative assignment">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style_main.css">
         <script src="triviaquestions.js"></script>
+        <script src="timer.js"></script>
         <style>
-            .container {
+            .container { /* Grid area */
                 display: grid;
                 grid-template-areas: 
                 'TL TR'
@@ -16,7 +17,7 @@
                 padding: 15px;
                 grid-gap: 15px;
             }
-            .top_left {
+            .top_left { /* top left part */
                 grid-area: TL;
                 background-color: tomato;
                 padding: 140px;
@@ -24,7 +25,7 @@
 
 
             }
-            .top_right {
+            .top_right { /*top right part*/
                 grid-area: TR;
                 background-color:yellow;
                 padding: 140px;
@@ -32,7 +33,7 @@
 
 
             }
-            .bottom_left {
+            .bottom_left { /* bottom left*/
                 grid-area: BL;
                 background-color: teal;
                 padding: 140px;
@@ -40,7 +41,7 @@
 
 
             }
-            .bottom_right {
+            .bottom_right {/* botton right*/
                 grid-area: BR;
                 background-color: blue;
                 padding: 140px;
@@ -61,7 +62,7 @@
                 text-decoration: none;
                 color: black;
             }
-            #submit {
+            #submit { /* stylized submit button */
                 font-family:'Orbitron','sans serif';
                 font-size: 20px;
                 background-color: aquamarine;
@@ -75,7 +76,7 @@
         <header>
             <div id="navbar">
                 <nav>
-                   <a href="index.html">Home</a>
+                   <a href="index.html">Home</a> <!--constant navbar -->
                    <a href="answer.html">Answer</a>
                    <a href="credits.html">Credits</a>
                    <a class="t" href="indexindex.html" ><b>Escape Room</b></a>
@@ -85,9 +86,9 @@
 
         <div class="container">
             <div class="top_left">
-                <h3><i>1. What is the html code for a page break?</i></h3>
+                <h3><i>1. What is the html code for a page break?</i></h3> <!---question #1-->
 
-                <input type="radio" id="br" name="answer" class="answer1" value="br">
+                <input type="radio" id="br" name="answer" class="answer1" value="br"> <!--radio button question-->
                 <label for="br">br</label> <br/> <br/> <br/> 
                 <input type="radio" id="break" name="answer" value="break">
                 <label for="break">break</label> <br/> <br/> <br/> 
@@ -99,9 +100,9 @@
 
             </div>
             <div class="top_right">
-                <h3><i>2. What symbol must always be used to close a CSS tag?</i></h3>
+                <h3><i>2. What symbol must always be used to close a CSS tag?</i></h3> <!---question #2-->
 
-                <input type="checkbox" id="semicolon" name="semicolon" value="semicolon">
+                <input type="checkbox" id="semicolon" name="semicolon" value="semicolon"> <!--check box question-->
                 <label for="yes">;</label> </br> </br> </br>
                 <input type="checkbox" id="colon" name="colon" value="colon">
                 <label for="yes">:</label> </br> </br> </br>
@@ -112,8 +113,8 @@
                 
             </div>
             <div class="bottom_left">
-                <h3><i>3. What is the CSS code for introducing a grid to the computer?</i></h3>
-                <input type="radio" id="displayGrid1" name="displayGrid1" value="displayGrid1">
+                <h3><i>3. What is the CSS code for introducing a grid to the computer?</i></h3> <!---question #3-->
+                <input type="radio" id="displayGrid1" name="displayGrid1" value="displayGrid1"> <!--radio button question-->
                 <label for="displayGrid1">Give me grid pls</label> </br> </br> </br>
                 <input type="radio" id="displayGrid2" name="displayGrid2" value="displayGrid2">
                 <label for="displayGrid2">grid: display;</label> </br> </br> </br> 
@@ -125,16 +126,16 @@
 
             </div>
             <div class="bottom_right">
-                <h3><i>4. What is the html line of code that must always be used at the beginning?</i></h3>
-                <input type="text" id="doctype" value="Enter Response Here">
+                <h3><i>4. What is the html line of code that must always be used at the beginning?</i></h3> <!---question #4-->
+                <input type="text" id="doctype" value="Enter Response Here"> <!--text box question-->
                 </br> </br> </br>
-                <input type="button" id="submit" name="submit" value="submit" onclick="submit()">
+                <input type="button" id="submit" name="submit" value="submit" onclick="submit()"> <!--submit button linked with function-->
                
 
             </div>
         </div>
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"> <!---ORBITRON FONT -->
     </body>
 </hmtl>
