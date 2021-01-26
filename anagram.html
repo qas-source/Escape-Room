@@ -6,8 +6,8 @@
         <meta name="description" content="HTML/CSS summative assignment">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style_main.css"> 
+        <script src="anagram.js"></script>
         <style>
-
             .container {
                 display: grid;
                 grid-template-areas:
@@ -56,15 +56,35 @@
                 font-size: 35px;
 
             }
-
-            a:link {
-                text-emphasis: none;
+            #NEXT {
+                visibility: hidden;
+                background-color: mediumaquamarine;
+                border-radius: 75px;
+                padding: 25px;
+                font-size: 30px;
+                font-family:'Orbitron', sans-serif;
+                
             }
-            a { 
-                text-decoration: none;
-            }
+            #password {
+                background-color: mediumaquamarine;
+                border-radius: 75px;
+                padding: 10px;
+                margin: auto;
+                font-size: 30px;
+                font-family:'Orbitron', sans-serif;
 
+            }
+            #submit {
+                background-color: yellow;
+                border-radius: 30px;
+                padding: 15px;
+                margin: auto;
+                font-size: 20px;
+                font-family:'Orbitron', sans-serif;
+                
+            }
         </style>
+            
        
     </head>
     <body>
@@ -92,19 +112,20 @@
                     <img id="folder" src="img/folder.jpeg" alt="this is a folder">
                     
                  </div>
-
                  <div class="photo2">
                     <img id="magnifying glass" src="img/magnifying glass.jpeg" alt="this is a magnifying glass">
                 </div>
 
                 <div class="the_letters">
-                    <h1><b>L H U M I E</b></h1>
+                    <center><h1><b><span>L</span><span>H</span><span>I</span><span>E</span><span>M</span><span>U</span></b></h1></center>
+                    <center><input type="text" id="password"></center>
+                    <center><input type="button" id="submit" value="submit" onclick="check()"></center>
+                    
                 </div>
                 <div class="the_footer">
-                    <h4><b><center>ONCE YOU SOLVE THIS, CLICK THE <a href="coolant_start.html">"NEXT PUZZLE"</a>BUTTON!</center></b></h4>
-
+                    <a href="coolant.html"><input type="button" id="NEXT" value="NEXT" onclick="NEXT()"></a>
                 </div>
-            </div>
+            <div>
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">

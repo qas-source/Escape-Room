@@ -17,11 +17,22 @@
                 font-family:'Orbitron','sans serif';
                 color:red;
                 font-size:140px;
+                margin: auto;
+                width: 100%;
+                text-align: center;
             }
             h2 {
                 font-family:'Orbitron','sans serif';
                 color:red;
                 font-size: 45px;
+            }
+            #output {
+                font-family: 'Orbitron','sans serif';
+                color: red;
+                font-size: 35px;
+                margin: auto;
+                width: 100%;
+                text-align: center;
             }
 
         </style>
@@ -37,7 +48,10 @@
                </nav>
            </div>
         </header>
-        <h1><b><center>THAT IS INCORRECT!</center></b></h1>
+        <h1><b>THAT IS INCORRECT!</b></h1>
+        <p  id="output">
+            <i>Place Holder</i>
+        </p>
         <br>
         <br>
         <br>
@@ -45,5 +59,9 @@
         <h2><b>Click <a href="triviaquestions.html">HERE</a> to return to the trivia page! </b></h2>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+        <script>
+            document.getElementById("output").innerHTML = "You got " + Number(sessionStorage.counter) + " out of 4";
+        </script>
     </body>
+
 <html>

@@ -6,6 +6,7 @@
         <meta name="description" content="HTML/CSS summative assignment">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style_main.css">
+        <script src="triviaquestions.js"></script>
         <style>
             .container {
                 display: grid;
@@ -60,7 +61,13 @@
                 text-decoration: none;
                 color: black;
             }
-         
+            #submit {
+                font-family:'Orbitron','sans serif';
+                font-size: 20px;
+                background-color: aquamarine;
+                border-radius: 70px;
+            }
+
 
         </style>
     </head>
@@ -78,62 +85,55 @@
 
         <div class="container">
             <div class="top_left">
-                <h3><i>1. What is the HTML tag for <u>entering</u> a new line?</i></h3>
-                <br>
-                <h7><a href="incorrect.html">a) "enter"</a></h7>
-                <br>
-                <br>
-                <h7><a href="correct.html">a) "br"</a></h7>
-                <br>
-                <br>
-                <h7><a href="incorrect.html">c) "break"</a></h7>
-                <br>
-                <br>
+                <h3><i>1. What is the html code for a page break?</i></h3>
+
+                <input type="radio" id="br" name="answer" class="answer1" value="br">
+                <label for="br">br</label> <br/> <br/> <br/> 
+                <input type="radio" id="break" name="answer" value="break">
+                <label for="break">break</label> <br/> <br/> <br/> 
+                <input type="radio" id="enter" name="answer" value="enter">
+                <label for="enter">Enter</label> </br> </br> </br> 
+
+               
+                
 
             </div>
             <div class="top_right">
                 <h3><i>2. What symbol must always be used to close a CSS tag?</i></h3>
-                <br>
-                <h7><a href="incorrect.html">a) ":"</a></h7>
-                <br>
-                <br>
-                <h7><a href="correct.html">b) ";"</a></h7>
-                <br>
-                <br>
-                <h7><a href="incorrect.html">c) "/"</a></h7>
-                <br>
-              
 
+                <input type="checkbox" id="semicolon" name="semicolon" value="semicolon">
+                <label for="yes">;</label> </br> </br> </br>
+                <input type="checkbox" id="colon" name="colon" value="colon">
+                <label for="yes">:</label> </br> </br> </br>
+                <input type="checkbox" id="slash" name="slash" value="slash">
+                <label for="yes">/</label> </br> </br> </br> 
+    
+                
+                
             </div>
             <div class="bottom_left">
                 <h3><i>3. What is the CSS code for introducing a grid to the computer?</i></h3>
-                <br>
-                <h7> <a href="correct.html">a) "display: grid;"</a></h7>
-                <br>
-                <br>
-                <h7><a href="incorrect.html">b) "grid; display;"</a></h7>
-                <br>
-                <br>
-                <h7><a href="incorrect.html">c) "show me: grid;"</a></h7>
-                <br>
+                <input type="radio" id="displayGrid1" name="displayGrid1" value="displayGrid1">
+                <label for="displayGrid1">Give me grid pls</label> </br> </br> </br>
+                <input type="radio" id="displayGrid2" name="displayGrid2" value="displayGrid2">
+                <label for="displayGrid2">grid: display;</label> </br> </br> </br> 
+                <input type="radio" id="displayGrid3" name="displayGrid3" value="displayGrid3">
+                <label for="displayGrid3">display: grid;</label>
+
+
               
 
             </div>
             <div class="bottom_right">
                 <h3><i>4. What is the html line of code that must always be used at the beginning?</i></h3>
-                <br>
-                <h7><a href="end.html">a) "!DOCTYPE hmtl"</a></h7>
-                <br>
-                <br>
-                <h7><a href="incorrect.html">b) !doctype HTML"</a></h7>
-                <br>
-                <br>
-                <h7><a href="incorrect.html">c) "DOCTYPE html"</a></h7>
-                <br>
+                <input type="text" id="doctype" value="Enter Response Here">
+                </br> </br> </br>
+                <input type="button" id="submit" name="submit" value="submit" onclick="submit()">
                
 
             </div>
         </div>
+
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     </body>
